@@ -4,6 +4,17 @@
 
 # Funniest Forecast for a City That Isn't
 
-Gloomsbury: upward rain today, 4-6pm; residents advised to wear umbrellas upside-down and tie hats to their heads.
+A deadpan weather bulletin for Gloomsbury, a town that does not exist —
+where the rain falls upwards and the only sane advice is umbrellas
+upside-down and hats tied to heads. The bulletin never breaks character;
+the absurdity does all the work.
+
+## Entry
 
 > Gloomsbury: upward rain today, 4-6pm; residents advised to wear umbrellas upside-down and tie hats to their heads.
+
+## Run
+
+```sh
+python3 main.py   # writes the entry to $MAKEFUN_OUTPUT_DIR/entry.txt (default /output)
+```

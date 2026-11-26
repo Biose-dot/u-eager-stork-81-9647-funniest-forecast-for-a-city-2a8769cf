@@ -1,39 +1,35 @@
-"""Funniest Forecast for a City That Isn't — a single line, under 120 characters.
+"""Funniest forecast for a city that isn't — one line, max 120 chars.
 
-The line is assembled from named parts so each clause can be judged on
-its own job: the setup, the turn, and the landing. See CRAFT notes below.
+The entry is a fake weather bulletin for Gloomsbury, a town that does not
+exist, where the rain falls upwards. The humour comes from the bulletin
+staying deadpan while advising the impossible: umbrellas upside-down,
+hats tied to heads.
 """
 
 import os
 
+# The forecast, in the order a bulletin would read it:
+#   1. the town,  2. the weather,  3. the advice to residents.
+# The punchline lands on a physical gag — hats tied to heads — instead
+# of a shrug, because a reader pictures an action, not a mood.
+SEGMENTS = [
+    "Gloomsbury:",
+    "upward rain today, 4-6pm;",
+    "residents advised to wear umbrellas upside-down and tie hats to their heads.",
+]
 
-# CRAFT — why this line is built the way it is:
-# 1. Invented city first (judge criterion 1): 'Gloomsbury' sounds like a real
-#    English town (Glooms- + -bury) yet exists nowhere; the name itself promises gloom.
-# 2. The joke IS the weather (criterion 2): rain falling UPWARDS is absurd weather,
-#    not a pun bolted onto a forecast. The laugh comes from picturing it.
-# 3. Flat bulletin voice, then the break (criterion 3): 'residents advised to...' is
-#    the deadpan phrasing of a real weather advisory, and it breaks by advising the
-#    impossible — umbrellas upside-down — which is the only sane response to upward rain.
-# 4. The city feels like a place (criterion 4): a named town, a time window (4-6pm),
-#    and residents with hats — a small world in one sentence.
-# 5. No wasted words (criterion 5): every clause earns its place; the punchline
-#    ('keep hats indoors') lands on the last words, where the judge's eye stops.
-# REVISION v2: 'upward rain' is tighter bulletin-speak than 'rain falls upwards' (saves 7 chars, reads like a real forecast term); 'tie hats to their heads' replaces the flat 'keep hats indoors' — a visible, absurd action the reader pictures, and the punchline now lands on a physical gag instead of a shrug.
-# The parts below are joined with single spaces; the entry is one line.
-PARTS = {
-    "header": 'Gloomsbury:',
-    "forecast": 'upward rain today, 4-6pm;',
-    "advisory": 'residents advised to wear umbrellas upside-down and tie hats to their heads.',
-}
+MAX_CHARS = 120
 
 
 def build_entry():
-    """Assemble the single line from its meaningful parts."""
-    line = " ".join(PARTS.values())
-    assert "\n" not in line, "entry must be a single line"
-    assert 1 <= len(line) <= 120, f"entry is {len(line)} chars, limit 120"
-    assert line.strip() == line, "entry must not have leading/trailing whitespace"
+    """Join the bulletin segments into the single entry line."""
+    line = " ".join(SEGMENTS)
+    if "\n" in line:
+        raise ValueError("entry must be a single line")
+    if not 1 <= len(line) <= MAX_CHARS:
+        raise ValueError(f"entry is {len(line)} chars, limit {MAX_CHARS}")
+    if line != line.strip():
+        raise ValueError("entry must not have leading/trailing whitespace")
     return line
 
 
