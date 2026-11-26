@@ -4,6 +4,6 @@
 
 # Funniest Forecast for a City That Isn't
 
-Gloomsbury: rain falls upwards today, 4-6pm; residents advised to wear umbrellas upside-down and keep hats indoors.
+Gloomsbury: upward rain today, 4-6pm; residents advised to wear umbrellas upside-down and tie hats to their heads.
 
-> Gloomsbury: rain falls upwards today, 4-6pm; residents advised to wear umbrellas upside-down and keep hats indoors.
+> Gloomsbury: upward rain today, 4-6pm; residents advised to wear umbrellas upside-down and tie hats to their heads.

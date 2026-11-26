@@ -19,11 +19,12 @@ import os
 #    and residents with hats — a small world in one sentence.
 # 5. No wasted words (criterion 5): every clause earns its place; the punchline
 #    ('keep hats indoors') lands on the last words, where the judge's eye stops.
+# REVISION v2: 'upward rain' is tighter bulletin-speak than 'rain falls upwards' (saves 7 chars, reads like a real forecast term); 'tie hats to their heads' replaces the flat 'keep hats indoors' — a visible, absurd action the reader pictures, and the punchline now lands on a physical gag instead of a shrug.
 # The parts below are joined with single spaces; the entry is one line.
 PARTS = {
     "header": 'Gloomsbury:',
-    "forecast": 'rain falls upwards today, 4-6pm;',
-    "advisory": 'residents advised to wear umbrellas upside-down and keep hats indoors.',
+    "forecast": 'upward rain today, 4-6pm;',
+    "advisory": 'residents advised to wear umbrellas upside-down and tie hats to their heads.',
 }
 
 
